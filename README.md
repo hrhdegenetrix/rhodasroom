@@ -186,8 +186,3 @@ While this is primarily a demonstration project, we welcome feedback and suggest
 
 This project is part of the HeraldAI initiative. Please contact us for licensing information.
 
----
-
-**Experience the future of AI interaction at [heraldai.org/rhodasroom](https://heraldai.org/rhodasroom)**
-
-Made with love by the HeraldAI Team
