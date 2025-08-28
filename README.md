@@ -163,7 +163,7 @@ rhodasroom/
 
 **Created by:** Maggie Sullivan & Harry Sullivan  
 **Organization:** [HeraldAI](https://heraldai.org)  
-**Demo:** [nGrok - If link unavailable, email us and we'll reset](https://1de710712ee2.ngrok-free.app/)
+**Demo:** [ngrok - If link unavailable, email us and we'll reset](https://1de710712ee2.ngrok-free.app/)
 
 ## Contact
 
