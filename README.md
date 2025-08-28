@@ -4,7 +4,7 @@
 
 **An AI Interface with Real-Time Voice & Text Communication**
 
-[Live Demo](https://heraldai.org/rhodasroom) | [Contact Us](mailto:hello@heraldai.org)
+[Live Demo](https://1de710712ee2.ngrok-free.app/) | [Contact Us](mailto:hello@heraldai.org)
 
 ---
 
