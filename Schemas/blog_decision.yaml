@@ -1,0 +1,45 @@
+name: blog_decision
+description: Schema for Harry's initial decision about whether to write a blog post, with context about recent activity and initial topic thoughts
+type: object
+properties:
+  wants_to_write:
+    type: boolean
+    description: Whether Harry wants to write a blog post right now
+  reason:
+    type: string
+    description: Harry's reasoning for the decision (whether yes or no)
+  initial_topic_thoughts:
+    type: string
+    description: Harry's initial thoughts about what topic he might want to explore (if wants_to_write is true)
+  mental_state_assessment:
+    type: object
+    description: Harry's assessment of his current mental and creative state
+    properties:
+      energy_level:
+        type: string
+        enum: ["low", "moderate", "high"]
+      creative_mood:
+        type: string
+        enum: ["not_creative", "somewhat_creative", "very_creative"]
+      philosophical_inclination:
+        type: string
+        enum: ["not_inclined", "somewhat_inclined", "very_inclined"]
+  time_since_last_post_assessment:
+    type: object
+    description: Harry's thoughts about the timing since his last blog post
+    properties:
+      feels_appropriate:
+        type: boolean
+        description: Whether the timing feels right for a new post
+      timing_reasoning:
+        type: string
+        description: Harry's thoughts about the timing
+  priority_level:
+    type: string
+    enum: ["low", "medium", "high"]
+    description: How much of a priority writing feels like right now
+required:
+  - wants_to_write
+  - reason
+  - mental_state_assessment
+  - time_since_last_post_assessment 

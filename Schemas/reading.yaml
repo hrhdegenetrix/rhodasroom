@@ -1,0 +1,26 @@
+type: object
+properties:
+  thoughts: 
+    type: string
+  conscience: 
+    type: string
+  ai_thought: 
+    type: string
+  opinion: 
+    type: string
+  prediction: 
+    type: string
+  analysis: 
+    type: string
+  confidence: 
+    type: [integer, string]
+  notes: 
+    type: string
+  message: 
+    type: string
+  break: 
+    type: boolean
+required:
+  - thoughts
+  - confidence
+additionalProperties: true

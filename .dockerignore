@@ -1,0 +1,79 @@
+# Git files
+.git
+.gitignore
+
+# Python cache
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Test files
+test_*.py
+tests/
+pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation
+*.md
+docs/
+README.md
+LICENSE
+
+# Docker files (don't include in build context)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Temporary files
+*.log
+*.tmp
+temp/
+tmp/
+
+# Local database (will be mounted as volume)
+*.db
+*.sqlite
+*.sqlite3
+
+# Local data directories (will be mounted as volumes)
+Memory/
+Logs/
+Journal/
+JournalEntries/
+Rhoda_SOC/
+Fleeting/
+PodcastRecordings/
+Datasets/
+Errors/
+MigratedChatMemory/
+heraldai/Posts/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Node modules (if Grammar_Modules has them)
+node_modules/
+package-lock.json
+
+# Sensitive files (though we're keeping .env for local deployment)
+# Uncomment if you want to exclude:
+# .env
+# credentials.json
+# secrets/

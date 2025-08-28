@@ -1,0 +1,19 @@
+# Async dependencies for Harry's AI Interface
+# These packages enable asynchronous I/O operations for improved performance
+
+# Async file I/O
+aiofiles>=24.1.0
+
+# Async Redis client
+redis[hiredis]>=5.0.0
+
+# Async HTTP client
+aiohttp>=3.9.0
+
+# Existing dependencies that support async
+requests>=2.31.0
+cohere>=5.0.0
+google-genai>=0.1.0
+
+# Additional async utilities
+asyncio>=3.4.3

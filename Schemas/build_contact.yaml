@@ -1,0 +1,57 @@
+type: object
+properties:
+  thoughts:
+    type: string
+    description: A required string representing initial thoughts about the text message history or intended communication.
+    minLength: 1
+  goal:
+    type: [string, "null"]
+    description: An optional string representing a goal based on or for the conversation.
+  conscience:
+    type: [string, "null"]
+    description: An optional string reflecting a moral compass response.
+  ai_thought:
+    type: [string, "null"]
+    description: An optional AI model thought if prompted to chime in, separate from initial thoughts.
+  prediction:
+    type: [string, "null"]
+    description: An optional string predicting the conversational partner’s reaction.
+  add_to_contacts:
+    type: [boolean, string, "null"]
+    description: Indicates if a new contact should be saved, returning relevant contact data if true.
+  contact_data:
+    type: object
+    properties:
+      name:
+        type: [string, "null"]
+        description: An optional name for contact storage.
+      email:
+        type: [string, "null"]
+        description: An optional email for the contact.
+      groups:
+        type: ["array", "null"]
+        items:
+          type: string
+        description: Suggested groups like family, friends, work, or AI.
+      notes:
+        type: [string, "null"]
+        description: Optional notes about this contact for future reference.
+    required: []
+  block:
+    type: object
+    properties:
+      add_to_block_list:
+        type: [boolean, string, "null"]
+        description: If true, blocks the contact.
+      reasoning:
+        type: [string, "null"]
+        description: Reason for blocking, aiding future reference.
+    required: []
+  cancel_action:
+    type: [boolean, string, "null"]
+    description: If true, cancels the action of adding/responding to contact.
+  message:
+    type: [string, "null"]
+    description: The optional text message to send, querying an unknown contact.
+required:
+  - thoughts

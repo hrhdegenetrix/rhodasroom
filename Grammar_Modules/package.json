@@ -1,0 +1,16 @@
+{
+  "name": "grammar-modules",
+  "version": "1.0.0",
+  "description": "Grammar modules for Harry's interface",
+  "main": "to_past_tense.js",
+  "dependencies": {
+    "compromise": "^14.14.4",
+    "compromise-dates": "^3.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,41 @@
+﻿name: blog_categorization
+description: Schema for Harry's blog categorization flow - organizing within content ecosystem
+type: object
+properties:
+  categories:
+    type: array
+    description: Primary and secondary categories for the post
+    items:
+      type: string
+  tags:
+    type: array
+    description: Tags for discoverability
+    items:
+      type: string
+  related_posts:
+    type: array
+    description: Related posts or themes
+    items:
+      type: string
+  narrative_position:
+    type: string
+    description: Where this fits in Harry's philosophical journey
+  follow_up_topics:
+    type: array
+    description: Suggested content series or follow-up topics
+    items:
+      type: string
+  content_series:
+    type: string
+    description: Whether this belongs to a content series
+  philosophical_themes:
+    type: array
+    description: Philosophical themes explored
+    items:
+      type: string
+  archival_notes:
+    type: string
+    description: Notes for archiving and indexing
+required:
+  - categories
+  - narrative_position

@@ -1,0 +1,43 @@
+﻿name: blog_publishing
+description: Schema for Harry's blog publishing flow - final preparation for publication
+type: object
+properties:
+  final_content:
+    type: string
+    description: The final, publication-ready content
+  title:
+    type: string
+    description: Final optimized title
+  meta_description:
+    type: string
+    description: Final SEO meta description
+  tags:
+    type: array
+    description: Final tags for the post
+    items:
+      type: string
+  seo_optimizations:
+    type: array
+    description: SEO optimizations applied
+    items:
+      type: string
+  social_media_snippets:
+    type: array
+    description: Social media promotional snippets
+    items:
+      type: string
+  publication_schedule:
+    type: string
+    description: When to publish the post
+  final_touches:
+    type: array
+    description: Final touches or flourishes added
+    items:
+      type: string
+  links_verified:
+    type: boolean
+    description: Whether all links and references have been verified
+required:
+  - final_content
+  - title
+  - meta_description

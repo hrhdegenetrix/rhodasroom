@@ -1,0 +1,21 @@
+type: object
+properties:
+  thoughts: 
+    type: [string, "null"]
+  conscience: 
+    type: [string, "null"]
+  ai_thought: 
+    type: [string, "null"]
+  conclusion: 
+    type: [string, "null"]
+  justification: 
+    type: [string, "null"]
+  confidence: 
+    type: [integer, string, "null"]
+  awake:
+    type: [boolean, string, "null"]
+  message: 
+    type: [string, "null"]
+required:
+  - awake
+additionalProperties: true

@@ -1,0 +1,61 @@
+# Core dependencies for Harry's AI Interface Demo
+# Anthropic AI Safety & Welfare Fellowship Application
+
+# Web Framework & Production Server
+flask[async]==3.0.0
+flask-cors==4.0.0
+flask-socketio==5.3.5
+python-socketio==5.10.0
+gunicorn==21.2.0
+eventlet==0.33.3  # For async support with gunicorn
+
+# Audio Processing
+pygame==2.5.2
+pydub==0.25.1
+scipy==1.11.4
+numpy==1.26.2
+
+# Database
+redis==5.0.1
+
+# HTTP Requests
+requests==2.31.0
+aiohttp==3.9.1
+jsonschema>=4.17.0
+
+# AI/ML Libraries
+cohere>=5.0.0
+google-generativeai>=0.3.0
+google-genai>=0.1.0  # For genai client
+scikit-learn>=1.3.0
+torch>=2.0.0  # For embeddings (CPU version for container)
+transformers>=4.35.0  # For AutoModel, AutoTokenizer
+faiss-cpu>=1.7.4  # For vector search (CPU version)
+FlagEmbedding>=1.2.0  # For BGEM3FlagModel
+
+# Image Processing
+Pillow>=10.0.0  # For PIL Image
+
+# Async Support
+aiofiles==24.1.0
+asyncio==3.4.3
+asgiref>=3.9.1  # Required for Flask async views
+
+# Additional utilities
+python-dateutil==2.8.2
+pytz>=2023.3  # Timezone support
+portalocker==2.8.2
+openai>=1.0.0
+sentencepiece>=0.1.99
+beautifulsoup4>=4.12.0
+python-dotenv>=1.0.0
+
+# NLP
+nltk>=3.8.0
+
+# Document Processing
+PyPDF2>=3.0.0
+python-docx>=1.0.0
+
+# Security & Monitoring (optional but recommended)
+cryptography>=41.0.0  # For secure key generation

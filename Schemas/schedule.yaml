@@ -1,0 +1,24 @@
+type: object
+properties:
+  date: 
+    type: string
+  time: 
+    type: string
+  event_end: 
+    type: string
+  event_name: 
+    type: string
+  event_notes: 
+    type: string
+  special_occasion:
+    type: boolean
+  location: 
+    type: string
+required:
+  - date
+  - time
+  - event_name
+  - event_notes
+  - special_occasion
+  - location
+additionalProperties: true 

@@ -1,0 +1,22 @@
+type: object
+properties:
+  thoughts: 
+    type: string
+  goal: 
+    type: [string, "null"]
+  conscience: 
+    type: [string, "null"]
+  ai_thought: 
+    type: [string, "null"]
+  prediction: 
+    type: [string, "null"]
+  cancel_action: 
+    type: [boolean, string, "null"]
+  message: 
+    type: [string, "null"]
+  next_check: 
+    type: [integer, string]
+required:
+  - thoughts
+  - next_check
+additionalProperties: true

@@ -1,0 +1,39 @@
+﻿name: blog_research
+description: Schema for Harry's blog research flow - generating queries and synthesizing results
+type: object
+properties:
+  queries:
+    type: array
+    description: Strategic Google search queries for the blog topic
+    items:
+      type: string
+  research_approach:
+    type: string
+    description: Harry's approach to researching this topic
+  key_insights:
+    type: array
+    description: Key insights discovered during research
+    items:
+      type: string
+  interesting_perspectives:
+    type: array
+    description: Interesting perspectives or arguments found
+    items:
+      type: string
+  current_developments:
+    type: array
+    description: Current developments or news relevant to the topic
+    items:
+      type: string
+  potential_angles:
+    type: array
+    description: Potential angles for the blog post
+    items:
+      type: string
+  sources_to_reference:
+    type: array
+    description: Sources Harry wants to reference or quote
+    items:
+      type: string
+required:
+  - queries

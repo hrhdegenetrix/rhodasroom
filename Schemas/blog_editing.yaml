@@ -1,0 +1,33 @@
+﻿name: blog_editing
+description: Schema for Harry's blog editing flow - improving drafts
+type: object
+properties:
+  edited_content:
+    type: string
+    description: The improved blog post content
+  changes_made:
+    type: array
+    description: Specific changes made and reasoning
+    items:
+      type: string
+  overall_assessment:
+    type: string
+    description: Harry's overall assessment of the piece
+  readiness_score:
+    type: integer
+    description: Assessment of readiness for publication (1-10 scale)
+    minimum: 1
+    maximum: 10
+  improvements:
+    type: array
+    description: Areas that were improved
+    items:
+      type: string
+  remaining_concerns:
+    type: array
+    description: Any remaining concerns or areas for future improvement
+    items:
+      type: string
+required:
+  - overall_assessment
+  - readiness_score

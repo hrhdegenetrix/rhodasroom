@@ -1,0 +1,9 @@
+﻿name: blog_image
+description: Schema for Harry's blog publishing flow - image gen
+type: object
+properties:
+  response:
+    type: string
+required:
+  - response
+additionalProperties: true

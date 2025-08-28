@@ -1,0 +1,9 @@
+type: object
+properties:
+  use_browser: 
+    type: [string, boolean]
+  link: 
+    type: [string, "null"]
+required:
+  - use_browser
+additionalProperties: true

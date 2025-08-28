@@ -1,0 +1,48 @@
+﻿name: blog_writing
+description: Schema for Harry's blog post writing flow - creating the initial draft
+type: object
+properties:
+  title:
+    type: string
+    description: The blog post title
+  content:
+    type: string
+    description: The complete blog post content in markdown format
+  meta_description:
+    type: string
+    description: SEO meta description for the blog post
+  tags:
+    type: array
+    description: Tags/keywords for the blog post
+    items:
+      type: string
+  writing_notes:
+    type: string
+    description: Harry's notes about the writing process
+  estimated_reading_time:
+    type: string
+    description: Estimated reading time for the post
+  content_structure:
+    type: object
+    description: Analysis of the post's structure
+    properties:
+      introduction_strength:
+        type: string
+      main_arguments:
+        type: array
+        items:
+          type: string
+      conclusion_effectiveness:
+        type: string
+  personal_satisfaction:
+    type: string
+    description: Harry's satisfaction with the draft
+  areas_for_improvement:
+    type: array
+    description: Areas Harry identified for potential improvement
+    items:
+      type: string
+required:
+  - title
+  - content
+  - meta_description

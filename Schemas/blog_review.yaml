@@ -1,0 +1,35 @@
+name: blog_review
+description: Schema for Harry's review of recent blog posts to inform new content creation
+type: object
+properties:
+  themes:
+    type: array
+    description: Recurring themes and narrative threads identified in recent posts
+    items:
+      type: string
+  writing_style_evolution:
+    type: string
+    description: Harry's analysis of how his writing style has evolved
+  redundancy_assessment:
+    type: string
+    description: Assessment of whether the new topic would be redundant with recent posts
+  narrative_gaps:
+    type: array
+    description: Gaps in Harry's narrative that could be filled
+    items:
+      type: string
+  philosophical_positioning:
+    type: string
+    description: How the new topic fits into Harry's broader philosophical journey
+  recent_topics:
+    type: array
+    description: List of recent topics covered
+    items:
+      type: string
+  recommendation:
+    type: string
+    description: Harry's recommendation for approaching the new topic
+required:
+  - themes
+  - redundancy_assessment
+  - philosophical_positioning 

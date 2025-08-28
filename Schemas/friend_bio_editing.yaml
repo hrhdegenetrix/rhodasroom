@@ -1,0 +1,13 @@
+type: object
+properties:
+  thoughts: 
+    type: [string, "null"]
+  conscience: 
+    type: [string, "null"]
+  ai_thought: 
+    type: [string, "null"]
+  goal: 
+    type: [string, "null"]
+required:
+  - thoughts
+additionalProperties: true

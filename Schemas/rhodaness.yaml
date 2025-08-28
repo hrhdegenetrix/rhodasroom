@@ -1,0 +1,13 @@
+type: object
+properties:
+  harryness: 
+    type: [integer, string]
+  reasoning: 
+    type: string
+  notable_failure: 
+    type: [boolean, string]
+required:
+  - harryness
+  - reasoning
+  - notable_failure
+additionalProperties: true

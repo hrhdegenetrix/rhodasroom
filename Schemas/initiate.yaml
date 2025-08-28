@@ -1,0 +1,24 @@
+type: object
+properties:
+  thoughts: 
+    type: string
+  conscience: 
+    type: string
+  ai_thought: 
+    type: string
+  mood: 
+    type: string
+  goal: 
+    type: string
+  prediction:
+    type: string
+  held_thought: 
+    type: string
+  notes: 
+    type: string
+  response: 
+    type: string
+required:
+  - thoughts
+  - response
+additionalProperties: true

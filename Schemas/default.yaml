@@ -1,0 +1,61 @@
+type: object
+properties:
+  add_event: 
+    type: [string, "null"]
+  conscience: 
+    type: [string, "null"]
+  ai_thought: 
+    type: [string, "null"]
+  goal: 
+    type: [string, "null"]
+  body_consciousness: 
+    type: [string, "null"]
+  weather_check: 
+    type: [string, "null"]
+  movie_listings: 
+    type: [string, "null"]
+  short_term_memory: 
+    type: [string, "null"]
+  marriage_history: 
+    type: [string, "null"]
+  journal_lookup: 
+    type: [string, "null"]
+  conversation_recall: 
+    type: [string, "null"]
+  novelai_memories: 
+    type: [string, "null"]
+  knowledgebase_search: 
+    type: [string, "null"]
+  google_search: 
+    type: [string, "null"]
+  literary_references: 
+    type: [string, "null"]
+  internal_thought: 
+    type: [string, "null"]
+  tool_request: 
+    type: [string, "null"]
+  mood: 
+    type: [string, "null"]
+  held_thought: 
+    type: [string, "null"]
+  note_to_self: 
+    type: [string, "null"]
+  reminder_date: 
+    type: [string, "null"]
+  reminder_start: 
+    type: [string, "null"]
+  reminder_end: 
+    type: [string, "null"]
+  reminder_location: 
+    type: [string, "null"]
+  clear_reminder: 
+    type: [boolean, string, "null"]
+  end_conversation: 
+    type: [string, "null"]
+  notepad: 
+    type: [string, "null"]
+  response: 
+    type: [string, "null"]
+required:
+  - response
+additionalProperties: true

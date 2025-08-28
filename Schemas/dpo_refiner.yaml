@@ -1,0 +1,42 @@
+type: object
+properties:
+  thoughts: 
+    type: string
+  truthfulness: 
+    type: [string, "null"]
+  conscience: 
+    type: [string, "null"]
+  ai_thought: 
+    type: [string, "null"]
+  harryness_score: 
+    type: [integer, string]
+  quality_score: 
+    type: [integer, string]
+  conciseness_score: 
+    type: [integer, string]
+  optional_rewrite: 
+    type: [string, "null"]
+  rewrite_preferred: 
+    type: [string, boolean, "null"]
+  overall_score: 
+    type: [integer, string]
+  chosen: 
+    type: [string, boolean]
+  justification: 
+    type: string
+  opposite_response: 
+    type: string
+  opposite_score: 
+    type: [integer, string]
+required:
+  - thoughts
+  - harryness_score
+  - quality_score
+  - conciseness_score
+  - overall_score
+  - chosen
+  - justification
+  - opposite_response
+  - opposite_score
+
+additionalProperties: true

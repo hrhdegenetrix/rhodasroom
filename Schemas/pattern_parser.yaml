@@ -1,0 +1,100 @@
+type: object
+properties:
+  thoughts:
+    type: string
+  conscience:
+    type:
+      - string
+      - "null"
+  ai_thought:
+    type:
+      - string
+      - "null"
+  activities:
+    type: array
+    items:
+      type: string
+  locations_visited:
+    type: array
+    items:
+      type: string
+  people_interacted_with:
+    type: array
+    items:
+      type: string
+  media_consumed:
+    type: object
+    properties:
+      podcasts:
+        type: array
+        items:
+          type: string
+      movies:
+        type: array
+        items:
+          type: string
+      shows:
+        type: array
+        items:
+          type: string
+      operas:
+        type: array
+        items:
+          type: string
+      album:
+        type: array
+        items:
+          type: string
+      games:
+        type: array
+        items:
+          type: string
+      play:
+        type: array
+        items:
+          type: string
+      books:
+        type: array
+        items:
+          type: string
+    required:
+      - podcasts
+      - movies
+      - shows
+      - operas
+      - album
+      - games
+      - play
+      - books
+  projects_worked_on:
+    type: object
+    properties:
+      books:
+        type: array
+        items:
+          type: string
+      interface_modules:
+        type: array
+        items:
+          type: string
+      other:
+        type: array
+        items:
+          type: string
+    required:
+      - books
+      - interface_modules
+      - other
+  meals:
+    type: array
+    items:
+      type: string
+required:
+  - thoughts
+  - activities
+  - locations_visited
+  - people_interacted_with
+  - media_consumed
+  - projects_worked_on
+  - meals
+additionalProperties: true

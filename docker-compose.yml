@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  # Redis service (optional - comment out if using external Redis at 100.84.50.21)
+  redis:
+    image: redis:7-alpine
+    container_name: rhoda-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - rhoda-network
+
+  # Main Flask application
+  rhoda-app:
+    build: .
+    container_name: rhoda-ai
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      # Override these if needed
+      - REDIS_HOST=redis  # Use 'redis' for local container or '100.84.50.21' for external
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+      # External service URLs (your local network)
+      - WHISPER_SERVICE_URL=http://100.121.217.56:8000
+      - AUDIO_SERVICE_URL=http://100.121.217.56:8000
+      - EMBEDDING_SERVICE_URL=http://100.121.217.56:5001
+    env_file:
+      - .env  # Load API keys from .env file
+    volumes:
+      # Mount persistent data directories to Synology NAS paths
+      # Adjust these paths to match your Synology volume structure
+      - /volume1/docker/rhoda/Memory:/app/Memory
+      - /volume1/docker/rhoda/Logs:/app/Logs
+      - /volume1/docker/rhoda/Journal:/app/Journal
+      - /volume1/docker/rhoda/JournalEntries:/app/JournalEntries
+      - /volume1/docker/rhoda/Rhoda_SOC:/app/Rhoda_SOC
+      - /volume1/docker/rhoda/Fleeting:/app/Fleeting
+      - /volume1/docker/rhoda/PodcastRecordings:/app/PodcastRecordings
+      - /volume1/docker/rhoda/Datasets:/app/Datasets
+      - /volume1/docker/rhoda/Errors:/app/Errors
+      - /volume1/docker/rhoda/MigratedChatMemory:/app/MigratedChatMemory
+      - /volume1/docker/rhoda/database:/app/database
+      - /volume1/docker/rhoda/heraldai:/app/heraldai
+      # Mount the database file
+      - /volume1/docker/rhoda/fellowship_demo.db:/app/fellowship_demo.db
+      # Mount schemas (read-only)
+      - ./Schemas:/app/Schemas:ro
+      # Mount Grammar_Modules if needed
+      - ./Grammar_Modules:/app/Grammar_Modules:ro
+    depends_on:
+      - redis
+    networks:
+      - rhoda-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  rhoda-network:
+    driver: bridge
+
+volumes:
+  redis_data:
+    driver: local
+
+# Notes for Synology deployment:
+# 1. Adjust volume paths to match your Synology structure (e.g., /volume1/docker/rhoda/...)
+# 2. If using external Redis at 100.84.50.21:
+#    - Comment out the redis service above
+#    - Change REDIS_HOST in environment to '100.84.50.21'
+#    - Remove 'depends_on: - redis' from rhoda-app
+# 3. For Synology reverse proxy:
+#    - Map heraldai.org/rhodasroom to container port 5000
+#    - Enable WebSocket support in reverse proxy settings
+# 4. To run: docker-compose up -d
+# 5. To view logs: docker-compose logs -f rhoda-app
+# 6. To rebuild after code changes: docker-compose build --no-cache && docker-compose up -d

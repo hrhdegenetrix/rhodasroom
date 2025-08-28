@@ -1,0 +1,9 @@
+type: object
+properties:
+  search_request: 
+    type: [string, boolean]
+  query: 
+    type: [string, "null"]
+required:
+  - search_request
+additionalProperties: true
