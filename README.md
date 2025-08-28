@@ -4,8 +4,6 @@
 
 **An AI Interface with Real-Time Voice & Text Communication**
 
-*Developed for the Anthropic AI Safety & Welfare Fellowship Application*
-
 [Live Demo](https://heraldai.org/rhodasroom) | [Contact Us](mailto:hello@heraldai.org)
 
 ---
@@ -14,7 +12,7 @@
 
 Rhoda's Room is an innovative AI communication interface featuring real-time voice and text capabilities with persona-based AI responses. Built as a demonstration of advanced AI interaction systems, it showcases natural conversation flow, memory persistence, and multimodal communication.
 
-The system primarily features "Rhoda" as the demo persona, with "Harry" serving as the AI assistant, creating an engaging and dynamic conversational experience.
+The system features "Rhoda" as the demo persona, creating an engaging and dynamic conversational experience. This is a stripped down version of the project for professional coding review, with no knowledgebase or other uniquely Rhoda data. The purpose of this repo is purely to provide coding transparency.
 
 ## Key Features
 
@@ -172,16 +170,6 @@ rhodasroom/
 - **Email:** [hello@heraldai.org](mailto:hello@heraldai.org)
 - **Discord:** Alchemicat
 - **GitHub:** [hrhdegenetrix](https://github.com/hrhdegenetrix)
-
-## Fellowship Application
-
-This project was developed as part of the Anthropic AI Safety & Welfare Fellowship application, demonstrating:
-
-- Advanced AI interaction design
-- Real-time multimodal communication
-- Memory and context management
-- Persona-based response systems
-- User experience optimization
 
 ## Security & Privacy
 
