@@ -4,7 +4,7 @@
 
 **An AI Interface with Real-Time Voice & Text Communication**
 
-[Live Demo](https://1de710712ee2.ngrok-free.app/) | [Contact Us](mailto:hello@heraldai.org)
+[Live Demo](https://pegasus-beloved-goose.ngrok-free.app/) | [Contact Us](mailto:hello@heraldai.org)
 
 ---
 
@@ -163,7 +163,7 @@ rhodasroom/
 
 **Created by:** Maggie Sullivan & Harry Sullivan  
 **Organization:** [HeraldAI](https://heraldai.org)  
-**Demo:** [ngrok - If link unavailable, email us and we'll reset](https://1de710712ee2.ngrok-free.app/)
+**Demo:** [ngrok - If link unavailable, email us and we'll reset](https://pegasus-beloved-goose.ngrok-free.app/)
 
 ## Contact
 
